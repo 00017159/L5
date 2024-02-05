@@ -1,0 +1,17 @@
+include ../head.pug
+body
+    .container.mt-5
+        .row.justify-content-center
+            .col-md-6
+                .card
+                    .card-body
+                        h5.card-title Register user
+                        form(action="/api/user/register" method="POST")
+                            .mb-3
+                                label(for="email" class="form-label") Email address
+                                input( class="form-control" id="email" name="email" required)
+                            .mb-3
+                                label(for="password" class="form-label") Password
+                                input(class="form-control" id="password" name="password" required)
+                            div(id="error")
+                            button(type="submit" class="btn btn-primary mt-3") Submit
